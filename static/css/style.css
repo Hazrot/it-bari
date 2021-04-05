@@ -39,6 +39,10 @@ body{
     
     border-bottom: 5px solid green;
     border-top: 5px solid green;
+  
+}
+.navbar ul{
+    z-index: 999;
 }
 .navbar ul li{
     display: inline-block;
@@ -56,14 +60,66 @@ body{
     color: black;
     font-weight: 700;
 }
+.navbar ul li{
+    position: relative;
+}
+.navbar ul li ul{
+    position: absolute;
+    background-color: #fff;
+    /* margin-top: 5px; */
+    left: -99999px;
+}
+.navbar ul li:hover ul{
+  /* position: absolute; */
+  left: 0;
+  /* left: 300px; */
+}
 
-.slider{
+.navbar ul li ul li{
+    float: none;
+    border-right: none;
+    border-bottom: 2px solid green;
+    
+
+}
+.navbar ul li ul li:first-child{
+    border-top: 2px solid green;
+}
+.navbar ul li ul li:last-child{
+    border-bottom: none;
+}
+.navbar ul li ul li a{
+    padding: 20px 40px  20px 40px;
+    display: block;
+
+}
+
+.slider-wrap{
     border-bottom: solid 4px green;
+    z-index: 1;
+    position: relative;
     
     
-}
-.slider img{
-   width: 960px;
-   height: 400px;    
 }
 
+.row{
+    margin: 30px;
+    overflow: hidden;
+}
+
+.col-1{
+    width: 590px;
+    float: left;
+    margin-right: 10px;
+}
+.col-2{
+    width: 300px;
+    float: right;
+}
+
+.footer{
+    background-color: grey;
+    padding:20px;
+    text-align:center;
+    color: #ff0000;
+}
